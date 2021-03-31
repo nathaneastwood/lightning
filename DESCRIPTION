@@ -1,0 +1,23 @@
+Package: lightning
+Type: Package
+Title: Generate Random Data in 'Spark'
+Version: 0.0.1
+Authors@R: person("Nathan", "Eastwood", "", "nathan.eastwood@icloud.com",
+    role = c("aut", "cre"))
+Maintainer: Nathan Eastwood <nathan.eastwood@icloud.com>
+Description: A package for generating random data in 'Spark'.
+URL: https://nathaneastwood.github.io/lightning/, https://github.com/nathaneastwood/lightning
+BugReports: https://github.com/nathaneastwood/lightning/issues
+Depends: R (>= 3.5)
+Suggests:
+    knitr,
+    pkgdown,
+    rmarkdown,
+    roxygen2,
+    tinytest
+License: GPL (>= 2)
+Encoding: UTF-8
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
+Language: en-GB

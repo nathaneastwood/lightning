@@ -1,0 +1,22 @@
+reference:
+- title: One table verbs
+  contents:
+
+- title: Two table verbs
+  contents:
+
+navbar:
+  type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+    - icon: fa-newspaper-o
+      text: "News"
+      href: news/index.html
+    - icon: fa-file-code-o
+      text: "Functions"
+      href: reference/index.html
+
+authors:
+  Nathan Eastwood:
+    href: https://nathaneastwood.github.io
