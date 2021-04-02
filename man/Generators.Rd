@@ -11,5 +11,5 @@ See \url{http://spark.apache.org/docs/latest/api/scala/org/apache/spark/mllib/ra
 for more information.
 }
 \seealso{
-\code{\link[=ExponentialGenerator]{ExponentialGenerator()}}, \code{\link[=StandardNormalGenerator]{StandardNormalGenerator()}}, \code{\link[=UniformGenerator]{UniformGenerator()}}
+\code{\link[=ExponentialGenerator]{ExponentialGenerator()}}, \code{\link[=NormalGenerator]{NormalGenerator()}}, \code{\link[=UniformGenerator]{UniformGenerator()}}
 }

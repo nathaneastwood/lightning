@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# {lightning}
+
+[![CRAN status](https://www.r-pkg.org/badges/version/lightning)](https://cran.r-project.org/package=lightning)
+
+## Overview
+
+{lightning} allows the user to generate deviates from different distributions.
+
+{lightning} is a personal learning project. I wanted to learn more about Scala invocations using {sparklyr} and chose generating random deviates from distributions using the [RandomRDDs singleton object](https://github.com/apache/spark/blob/v3.1.1/mllib/src/main/scala/org/apache/spark/mllib/random/RandomRDDs.scala).
+
+## Installation
+
+You can install:
+
+* the development version from [GitHub](https://github.com/nathaneastwood/lightning) with
+
+```{r installation, eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("nathaneastwood/lightning")
+```
+
+## Usage
+
+{lightning} provides two methods for generating random variates. Firstly, we can generate N values from a `Distribution` class:
+
+```{r distributions}
+sc <- sparklyr::spark_connect(master = "local")
+
+library(lightning)
+
+norm <- Normal$new(sc = sc, size = 10L, num_partitions = 1L, seed = 1L)
+norm$count()
+norm$collect()
+norm$first()
+norm$get_num_partitions()
+```
+
+Secondly we can generate single values from a `Generator` class:
+
+```{r generator}
+norm_gen <- NormalGenerator$new(sc = sc)
+norm_gen$set_seed(1L)
+norm_gen$next_value()
+```
+
+## TODO
+
+- Allow the ability to [`map()`](https://spark.apache.org/docs/2.4.3/api/java/org/apache/spark/rdd/RDD.html#map-scala.Function1-scala.reflect.ClassTag-) the distributions.
+- Convert the RandomRDDs to a Spark `DataFrame`.
+
+## Acknowledgments
+
+[jozefhajnala](https://github.com/jozefhajnala) and [yitao-li](https://github.com/yitao-li) for their help on this topic.

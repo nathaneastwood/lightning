@@ -1,9 +1,15 @@
 reference:
-- title: One table verbs
+- title: Distributions
   contents:
+    - Exponential
+    - Normal
+    - Uniform
 
-- title: Two table verbs
+- title: Generators
   contents:
+    - ExponentialGenerator
+    - NormalGenerator
+    - UniformGenerator
 
 navbar:
   type: inverse

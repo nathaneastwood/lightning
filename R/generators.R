@@ -9,7 +9,7 @@
 #' for more information.
 #'
 #' @seealso
-#' [ExponentialGenerator()], [StandardNormalGenerator()], [UniformGenerator()]
+#' [ExponentialGenerator()], [NormalGenerator()], [UniformGenerator()]
 #'
 #' @importFrom R6 R6Class
 #' @name Generators
