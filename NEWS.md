@@ -1,4 +1,4 @@
-# {lightning} 0.0.1
+# lightning 0.0.1
 
 This initial release adds:
 
